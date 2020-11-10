@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "BDqEQnJRbiHsqJshhbnr50wqK4bFUttLRKvY3ej0s2o8NBg1Ynm447bfdGm8rIaASvSQIfP4H1mUM9xFB/o6EQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ivan\\source\\repos\\Workshop_Core\\ConferenceDTO\\ConferenceDTO.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Ivan\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Ivan\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
