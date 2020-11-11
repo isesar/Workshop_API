@@ -45,6 +45,7 @@ namespace BackEnd
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 options.IncludeXmlComments(xmlPath);
+                options.DescribeAllEnumsAsStrings();
 
             });
 
