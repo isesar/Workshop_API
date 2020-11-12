@@ -33,7 +33,7 @@ namespace BackEnd.Controllers
                                                     s.Track.Name.Contains(query)
                                                 )
                                                 .ToListAsync();
-
+            Console.WriteLine(sessionResults);
             var speakerResults = await _context.Speakers.Include(s => s.SessionSpeaker)
                                                     .ThenInclude(ss => ss.Session)
                                                 .Where(s =>
@@ -42,7 +42,7 @@ namespace BackEnd.Controllers
                                                     s.WebSite.Contains(query)
                                                 )
                                                 .ToListAsync();
-
+            Console.WriteLine(speakerResults);
             var results = sessionResults.Select(s => new SearchResult
             {
                 Type = SearchResultType.Session,

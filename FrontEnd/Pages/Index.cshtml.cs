@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using ConferenceDTO;
 using FrontEnd.Services;
@@ -23,12 +24,13 @@ namespace FrontEnd.Pages
 
         public IEnumerable<(int Offset, DayOfWeek? DayofWeek)> DayOffsets { get; set; }
 
+        public bool isAdmin { get; set; }
         public int CurrentDayOffset { get; set; }
         public async Task OnGet(int day=0)
         {
-           
-            
-                CurrentDayOffset = day;
+            isAdmin = User.IsAdmin();
+
+            CurrentDayOffset = day;
 
                 var sessions = await _apiClient.GetSessionsAsync();
 
