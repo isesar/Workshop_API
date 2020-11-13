@@ -21,14 +21,17 @@ namespace FrontEnd.Pages
             _apiClient = apiClient;
         }
         public IEnumerable<IGrouping<DateTimeOffset?, SessionResponse>> Sessions { get; set; }
+        [TempData]
+        public string Message { get; set; }
 
+        public bool ShowMessage => !string.IsNullOrEmpty(Message);
         public IEnumerable<(int Offset, DayOfWeek? DayofWeek)> DayOffsets { get; set; }
 
-        public bool isAdmin { get; set; }
+        public bool IsAdmin { get; set; }
         public int CurrentDayOffset { get; set; }
         public async Task OnGet(int day=0)
         {
-            isAdmin = User.IsAdmin();
+            IsAdmin = User.IsAdmin();
 
             CurrentDayOffset = day;
 

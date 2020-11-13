@@ -22,10 +22,10 @@ namespace FrontEnd.Areas.Identity
 
                 services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
                     .AddEntityFrameworkStores<IdentityDbContext>();
-                /*
-                services.AddDefaultIdentity<User>()
-                        .AddEntityFrameworkStores<IdentityDbContext>()
-                        .AddClaimsPrincipalFactory<ClaimsPrincipalFactory>();  */
+                
+                //services.AddDefaultIdentity<User>()
+                //        .AddEntityFrameworkStores<IdentityDbContext>()
+                //        .AddClaimsPrincipalFactory<ClaimsPrincipalFactory>();  
             });
 
         }
